@@ -1,6 +1,6 @@
 # Contact Manager
 
-This project is a implementation of a basic To Do List made using React.js.
+This project is an implementation of a basic Contact Manager made using React.js.
 
 ## Installations
 
@@ -50,4 +50,4 @@ Open your Browser. Go to the address -
 http://localhost:3000/
 ```
 
-you can also check [`here`](http://localhost:3000/)
+Or you can also click [`here`](http://localhost:3000/)
