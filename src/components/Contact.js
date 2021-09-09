@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../App.css";
+import AddInfo from "./AddInfo";
+import ShowInfo from "./ShowInfo";
 
 const Contact = () => {
   const [contactName, setContactName] = useState("");
@@ -26,6 +28,8 @@ const Contact = () => {
           return elem;
         })
       );
+      alert("Saved Successfully!");
+
       setToggleAddAndEdit(true);
 
       setContactName("");
@@ -38,6 +42,8 @@ const Contact = () => {
         name: contactName,
         number: contactNumber,
       };
+      alert("Saved Successfully!");
+
       setElements([...elements, allInputData]);
       setContactName("");
       setContactNumber("");
@@ -72,71 +78,20 @@ const Contact = () => {
   return (
     <>
       <div className="container">
-        <h1 className="header">
-          Contacts{" "}
-          {toggleAddAndEdit ? (
-            <button
-              title="Add Contact Details"
-              onClick={addElements}
-              className="btn-secondary"
-            >
-              Create New Contact
-            </button>
-          ) : (
-            <button
-              title="Edit Contact Details"
-              onClick={addElements}
-              className="btn-edit"
-            >
-              Save Changes
-            </button>
-          )}
-        </h1>
-
-        <div className="addInfo">
-          <label>Name</label>
-          <input
-            type="text"
-            placeholder="Add Contact Name"
-            value={contactName}
-            onChange={(e) => setContactName(e.target.value)}
-          />
-          <label>Phone Number</label>
-          <input
-            type="number"
-            placeholder="Add Contact Number"
-            value={contactNumber}
-            onChange={(e) => setContactNumber(e.target.value)}
-          />
-        </div>
-
-        <div className="showInfo">
-          <h2 className="header">Directory</h2>
-          {elements.length > 0
-            ? elements.map((info) => {
-                return (
-                  <div className="eachInfo" key={info.id}>
-                    <h3>{info.name}</h3>
-                    <h4>{info.number}</h4>
-                    <button
-                      title="Update Contact Details"
-                      onClick={() => editInfo(info.id)}
-                      className="btn btn-secondary"
-                    >
-                      Update
-                    </button>
-                    <button
-                      title="Delete Contact Details"
-                      onClick={() => deleteElements(info.id)}
-                      className="btn"
-                    >
-                      Delete
-                    </button>
-                  </div>
-                );
-              })
-            : "No contacts to show."}
-        </div>
+        <h1 className="header">Contacts</h1>
+        <AddInfo
+          contactName={contactName}
+          setContactName={setContactName}
+          contactNumber={contactNumber}
+          setContactNumber={setContactNumber}
+          onChange={addElements}
+          toggleAddAndEdit={toggleAddAndEdit}
+        />
+        <ShowInfo
+          elements={elements}
+          deleteElements={deleteElements}
+          editInfo={editInfo}
+        />
       </div>
     </>
   );

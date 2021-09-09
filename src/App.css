@@ -9,15 +9,19 @@
 body {
   font-family: "Signika", sans-serif;
   background-color: #95b9c7;
-}
+  background-image: url("https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmludGFnZSUyMHBob25lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 120%;
+}
 .container {
   max-width: 500px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid #2c3539;
-  background-color: lavender;
+  border: 1px solid whitesmoke;
   padding: 30px;
   border-radius: 5px;
 }
@@ -25,6 +29,8 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  color: white;
+  text-shadow: 0 0 3px #2c3539, 0 0 5px #2c3539;
   align-items: center;
   margin-bottom: 20px;
 }
@@ -47,6 +53,7 @@ body {
   display: inline-block;
   background: #2c3539;
   color: #fff;
+  text-shadow: 0 0 3px black;
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -55,13 +62,15 @@ body {
   text-decoration: none;
   font-size: 15px;
   font-family: inherit;
-  border: 1px solid black;
+  border: 1px solid #C2B280;
+  box-shadow: 0 0 3px #C2B280 , 0 0 5px #C2B280;
 }
 
 .btn-secondary {
   display: inline-block;
-  background: #1974d2;
+  background: #C2B280;
   color: #fff;
+  text-shadow: 0 0 3px black;
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -70,7 +79,8 @@ body {
   text-decoration: none;
   font-size: 15px;
   font-family: inherit;
-  border: 1px solid black;
+  border: 1px solid #2c3539;
+  box-shadow: 0 0 3px #2c3539;
 }
 
 .btn:focus {
@@ -99,18 +109,18 @@ body {
 }
 .showInfo {
   margin-top: 20px;
-  background-color: lavender;
   justify-content: center;
+  color: white;
+  text-shadow: 0 0 3px black;
 }
 .eachInfo {
   max-width: 90%;
   margin-bottom: 5px;
   overflow: auto;
   min-height: 10px;
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
   padding: 30px;
   border-radius: 5px;
-  background-color: whitesmoke;
   position: relative;
   left: 30px;
 }
