@@ -56,6 +56,7 @@ const Contact = () => {
     const updatedInfo = elements.filter((info) => {
       return info.id !== id;
     });
+    alert("Contact Deleted!");
 
     setElements(updatedInfo);
   };
@@ -76,24 +77,22 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <div className="container">
-        <h1 className="header">Contacts</h1>
-        <AddInfo
-          contactName={contactName}
-          setContactName={setContactName}
-          contactNumber={contactNumber}
-          setContactNumber={setContactNumber}
-          onChange={addElements}
-          toggleAddAndEdit={toggleAddAndEdit}
-        />
-        <ShowInfo
-          elements={elements}
-          deleteElements={deleteElements}
-          editInfo={editInfo}
-        />
-      </div>
-    </>
+    <div className="container">
+      <h1 className="header">Contacts</h1>
+      <AddInfo
+        contactName={contactName}
+        setContactName={setContactName}
+        contactNumber={contactNumber}
+        setContactNumber={setContactNumber}
+        onChange={addElements}
+        toggleAddAndEdit={toggleAddAndEdit}
+      />
+      <ShowInfo
+        elements={elements}
+        deleteElements={deleteElements}
+        editInfo={editInfo}
+      />
+    </div>
   );
 };
 
