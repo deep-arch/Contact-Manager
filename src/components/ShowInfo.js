@@ -1,6 +1,13 @@
 import Change from "./Change";
 
-export const ShowInfo = ({ elements, deleteElements, editInfo }) => {
+export const ShowInfo = ({
+  elements,
+  setElements,
+  setToggleAddAndEdit,
+  setContactName,
+  setContactNumber,
+  setUpdateInfo,
+}) => {
   return (
     <div className="showInfo">
       <h2 className="header">Directory</h2>
@@ -11,8 +18,13 @@ export const ShowInfo = ({ elements, deleteElements, editInfo }) => {
                 <h3>{info.name}</h3>
                 <h4>{info.number}</h4>
                 <Change
-                  updateContact={() => editInfo(info.id)}
-                  deleteContact={() => deleteElements(info.id)}
+                  setElements={setElements}
+                  elements={elements}
+                  setToggleAddAndEdit={setToggleAddAndEdit}
+                  setContactName={setContactName}
+                  setContactNumber={setContactNumber}
+                  setUpdateInfo={setUpdateInfo}
+                  info={info}
                 />
               </div>
             );

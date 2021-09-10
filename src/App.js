@@ -1,8 +1,8 @@
-import Contact from "./components/Contact";
+import Manager from "./components/Manager";
 const App = () => {
   return (
     <>
-      <Contact />
+      <Manager />
     </>
   );
 };

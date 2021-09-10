@@ -29,8 +29,8 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  color: white;
-  text-shadow: 0 0 3px #2c3539, 0 0 5px #2c3539;
+  color: black;
+  text-shadow: 0 0 3px whitesmoke, 0 0 5px whitesmoke;
   align-items: center;
   margin-bottom: 20px;
 }
@@ -110,8 +110,8 @@ body {
 .showInfo {
   margin-top: 20px;
   justify-content: center;
-  color: white;
-  text-shadow: 0 0 3px black;
+  color: black;
+  text-shadow: 0 0 3px whitesmoke;
 }
 .eachInfo {
   max-width: 90%;

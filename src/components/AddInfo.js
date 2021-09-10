@@ -3,9 +3,52 @@ const AddInfo = ({
   setContactName,
   contactNumber,
   setContactNumber,
-  onChange,
   toggleAddAndEdit,
+  setToggleAddAndEdit,
+  elements,
+  setElements,
+  updateInfo,
+  setUpdateInfo,
 }) => {
+  //Adding Infos
+
+  const addElements = () => {
+    if (
+      !contactName ||
+      !contactNumber ||
+      contactNumber < 1000000000 ||
+      contactNumber > 9999999999
+    ) {
+      alert("Please enter a valid input!");
+    } else if (contactName && contactNumber && !toggleAddAndEdit) {
+      setElements(
+        elements.map((elem) => {
+          if (elem.id === updateInfo)
+            return { ...elem, name: contactName, number: contactNumber };
+          return elem;
+        })
+      );
+      alert("Saved Successfully!");
+
+      setToggleAddAndEdit(true);
+
+      setContactName("");
+      setContactNumber("");
+
+      setUpdateInfo(null);
+    } else {
+      const allInputData = {
+        id: new Date().getTime().toString(),
+        name: contactName,
+        number: contactNumber,
+      };
+      alert("Saved Successfully!");
+
+      setElements([...elements, allInputData]);
+      setContactName("");
+      setContactNumber("");
+    }
+  };
   return (
     <div className="addInfo">
       <label className="header">Name</label>
@@ -25,7 +68,7 @@ const AddInfo = ({
       {toggleAddAndEdit ? (
         <button
           title="Add Contact Details"
-          onClick={onChange}
+          onClick={addElements}
           className="btn-secondary"
         >
           Create New Contact
@@ -33,7 +76,7 @@ const AddInfo = ({
       ) : (
         <button
           title="Update Contact Details"
-          onClick={onChange}
+          onClick={addElements}
           className="btn-edit"
         >
           Save Changes
