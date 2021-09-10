@@ -55,4 +55,4 @@ Or you can also click [`here`](http://localhost:3000/)
 
 ---
 
-##### **When you are cloning the repository using [step 4](#4-clone-this-repository), it clones the repository from a different branch **`props`** where the component `Contact.js` is further broken down into sub components.**
+##### **When you are cloning the repository using [step 4](#4-clone-this-repository), it clones the repository from a different branch **`props`** where the component is further broken down into sub components.**
