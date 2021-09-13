@@ -1,15 +1,20 @@
-const AddInfo = ({
-  contactName,
-  setContactName,
-  contactNumber,
-  setContactNumber,
-  toggleAddAndEdit,
-  setToggleAddAndEdit,
-  elements,
-  setElements,
-  updateInfo,
-  setUpdateInfo,
-}) => {
+import { useContext } from "react";
+import { ManageContext } from "./Manager";
+import { HeadContext } from "./Header";
+
+const AddInfo = () => {
+  const { elements, setElements } = useContext(ManageContext);
+  const {
+    contactName,
+    setContactName,
+    contactNumber,
+    setContactNumber,
+    toggleAddAndEdit,
+    setToggleAddAndEdit,
+    updateInfo,
+    setUpdateInfo,
+  } = useContext(HeadContext);
+
   //Adding Infos
 
   const addElements = () => {
@@ -49,6 +54,7 @@ const AddInfo = ({
       setContactNumber("");
     }
   };
+  
   return (
     <div className="addInfo">
       <label className="header">Name</label>

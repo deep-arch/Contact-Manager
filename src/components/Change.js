@@ -1,12 +1,16 @@
-const Change = ({
-  elements,
-  setElements,
-  setToggleAddAndEdit,
-  setContactName,
-  setContactNumber,
-  setUpdateInfo,
-  info,
-}) => {
+import { useContext } from "react";
+import { ManageContext } from "./Manager";
+import { HeadContext } from "./Header";
+
+const Change = ({ info }) => {
+  const { elements, setElements } = useContext(ManageContext);
+  const {
+    setContactName,
+    setContactNumber,
+    setToggleAddAndEdit,
+    setUpdateInfo,
+  } = useContext(HeadContext);
+
   // Deleting Infos
 
   const deleteElements = (id) => {

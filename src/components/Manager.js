@@ -1,18 +1,17 @@
+import React, { useState } from "react";
 import "../App.css";
-import { useState } from "react";
 import Header from "./Header";
 
+const ManageContext = React.createContext();
 const Manager = () => {
   const [elements, setElements] = useState([]);
 
   return (
-    <div>
-      <Header
-        elements={elements}
-        setElements={setElements}
-      />
-    </div>
+    <ManageContext.Provider value={{ elements, setElements }}>
+      <Header />
+    </ManageContext.Provider>
   );
 };
 
 export default Manager;
+export { ManageContext };
