@@ -22,7 +22,7 @@ This project is an implementation of a basic Contact Manager made using React.js
 ### 4. Clone this repository
 
 ```sh
-git clone -b props https://github.com/deep-arch/Contact-Manager.git
+git clone -b useContext https://github.com/deep-arch/Contact-Manager.git
 ```
 
 ### 5. Go to the working directory
@@ -55,4 +55,4 @@ Or you can also click [`here`](http://localhost:3000/)
 
 ---
 
-##### **When you are cloning the repository using [step 4](#4-clone-this-repository), it clones the repository from a different branch **`props`** where the component is further broken down into sub components.**
+##### **When you are cloning the repository using [step 4](#4-clone-this-repository), it clones the repository from a different branch **`useContext`** where the component is further broken down into sub-components.**
