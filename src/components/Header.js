@@ -1,18 +1,13 @@
+import { useState } from "react";
 import AddInfo from "./AddInfo";
 import ShowInfo from "./ShowInfo";
 
-const Header = ({
-  contactName,
-  setContactName,
-  contactNumber,
-  setContactNumber,
-  elements,
-  setElements,
-  toggleAddAndEdit,
-  setToggleAddAndEdit,
-  updateInfo,
-  setUpdateInfo,
-}) => {
+const Header = ({ elements, setElements }) => {
+  const [contactName, setContactName] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [toggleAddAndEdit, setToggleAddAndEdit] = useState(true);
+  const [updateInfo, setUpdateInfo] = useState("null");
+
   return (
     <div className="container">
       <h1 className="header">Contacts</h1>

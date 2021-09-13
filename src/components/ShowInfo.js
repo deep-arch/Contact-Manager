@@ -1,6 +1,6 @@
 import Change from "./Change";
 
-export const ShowInfo = ({
+const ShowInfo = ({
   elements,
   setElements,
   setToggleAddAndEdit,
