@@ -110,8 +110,8 @@ body {
 .showInfo {
   margin-top: 20px;
   justify-content: center;
-  color: black;
-  text-shadow: 0 0 3px whitesmoke;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px white, 0 0 5px white;
 }
 .eachInfo {
   max-width: 90%;
